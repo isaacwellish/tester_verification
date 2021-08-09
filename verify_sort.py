@@ -32,7 +32,12 @@ line1_edit3 = line1[(wo+3):(wo+7)]
 wo_edit = []
 wo_edit = [0 for i in range(len(all_lines))]
 
+#print(all_lines[0].find('ok new order'))
+
 for i in range(0, len(all_lines)):
+    if all_lines[i].find('ok new order') == 0:
+        all_lines[i] = ''
+
     line = all_lines[i]
     #print("this is line:" + line)
     wo = line.find('WO ')
