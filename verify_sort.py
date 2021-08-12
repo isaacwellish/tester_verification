@@ -35,7 +35,7 @@ wo_edit = [0 for i in range(len(all_lines))]
 #print(all_lines[0].find('ok new order'))
 
 for i in range(0, len(all_lines)):
-    if all_lines[i].find('ok new order') == 0:
+    if all_lines[i].find('new order') == 0:
         all_lines[i] = ''
 
     line = all_lines[i]
