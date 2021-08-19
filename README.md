@@ -13,4 +13,5 @@ for automating the tester verification process
 8. Hit enter
 9. Viola 
 
+![alt text](https://github.com/isaacwellish/tester_verification/blob/master/output.png?raw=true)
 
