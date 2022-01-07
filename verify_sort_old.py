@@ -23,8 +23,7 @@ for i in range(0, len(all_lines)):
         if line_first_char == ' ':
             line_first_char = line[1]
         # check if first char is a number
-        #if line_first_char.isnumeric() == False:
-        if (line_first_char != 'W') and (line_first_char != '*'):
+        if line_first_char.isnumeric() == False:
             all_lines[i] = ''
             line = all_lines[i]
 
