@@ -9,22 +9,41 @@ all_lines = file1.readlines()
 # print all the lines first
 for i in range(0, len(all_lines)):
     print(all_lines[i])
+    #print(len(all_lines[i]))
 
 wo_edit = []
 wo_edit = [0 for i in range(len(all_lines))]
 
+#unused for now, but would like to use to make code simpler
+def erase_line():
+    print('erase_line function')
+    all_lines[i] = ''
+    line = all_lines[i]
+
 for i in range(0, len(all_lines)):
     line = all_lines[i]
+    #print(len(all_lines[i]))
     if line == '':
         break
     else:
-        line_first_char = line[0]
+        line_first_char = line[0] # The first char of each line
+        #print(line_first_char)
         # if first char is a ' ', check the next
-        if line_first_char == ' ':
-            line_first_char = line[1]
-        # check if first char is a number
+       # if line_first_char == ' ':
+        #    line_first_char = line[1]
+         #   print('just a space, nothing to see here')
+        # check if first char is a WO char
+        # if first line doesn't start with a W and it doesn't start with a *
+        # get rid of it! It's not a line we care about
+        # mostly for lines like 'New Order:'
         #if line_first_char.isnumeric() == False:
         if (line_first_char != 'W') and (line_first_char != '*'):
+            #erase_line()
+            all_lines[i] = ''
+            line = all_lines[i]
+        # Check to see if the line is a short text based line (e.g *REV*)
+        if len(all_lines[i])< 30:
+            #erase_line()
             all_lines[i] = ''
             line = all_lines[i]
 
